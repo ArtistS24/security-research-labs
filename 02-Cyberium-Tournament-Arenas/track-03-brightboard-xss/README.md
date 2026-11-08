@@ -27,7 +27,7 @@ The track includes 2 official walkthrough dossiers authored by Denis Albin conta
 ```yaml
 track_metadata:
   name: "BrightBoard Collaboration Suite"
-  stack: "PHP 8.x + MySQL + JavaScript Frontend (Docker Compose)"
+  stack: "PHP 8.2 + SQLite (PDO) + JavaScript Frontend (Docker Compose)"
   tournament_id: "XE107-M03"
   total_questions: 16
   archive_package: "htg-xss.zip"
@@ -40,11 +40,11 @@ attack_surface:
     exploit: "<script>alert(document.domain)</script>"
   stored_xss:
     vector: "Persistent message board post submission"
-    mechanism: "Database storage of unescaped user comments rendered to all active users"
+    mechanism: "SQLite storage of unescaped user comments rendered to all active users"
     exploit: "Injected payload steals document.cookie upon victim thread viewing"
   dom_xss:
-    vector: "Client-side JavaScript DOM manipulation"
-    mechanism: "Unsafe innerHTML / location.hash sinks processing untrusted client input"
+    vector: "Client-side JavaScript DOM manipulation (?name= parameter)"
+    mechanism: "Unsafe innerHTML / window.location.search sinks processing untrusted client input"
     exploit: "Execution flow redirection bypassing server-side input filters"
 ```
 

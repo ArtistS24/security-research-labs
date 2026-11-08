@@ -110,7 +110,7 @@ security-research-labs/
 │       ├── test-ua-cloaking.ps1        # 51-signature User-Agent cloaking probe script
 │       ├── ua-test-results.csv         # HTTP request/response empirical telemetry
 │       ├── body.html                   # Captured writeup HTML containing canary payload
-│       └── screenshots/                # 6 WHOIS, VirusTotal & source evidence captures
+│       └── screenshots/                # 8 WHOIS, VirusTotal, urlscan.io & source evidence captures
 ├── 02-Cyberium-Tournament-Arenas/
 │   ├── README.md                       # Master tournament runbook & challenge guide
 │   ├── track-01-corplink-php/          # 4-stage PHP exploitation arena
